@@ -35,8 +35,9 @@
     grid-template-areas: 
         "c c h h h h h h h h h h"
         "t t b b b b a a a a a a"
+        "p p e e e e a a a a a a"
         "q q e e e e a a a a a a"
-        "k k e e e e a a a a a a"
+        "k k f f f f f f f f f f"
         "k k f f f f f f f f f f";
 }
 li{
@@ -53,6 +54,10 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     color: black;
 
+}
+
+.portrait{
+    grid-area:p;
 }
 
 .abouttext{
@@ -170,7 +175,7 @@ footer{
     padding-top:0px;
     padding-bottom: 0px;
     grid-area: c;
-    
+  
 }
 header {
     grid-area: h;
@@ -192,7 +197,11 @@ header {
     
 }
 
-.pattern{ grid-area: k;}
+.contacticon{
+    background-image:url("assets/Email_Icon.svg");
+}
+
+/* .pattern{ grid-area: k;} */
 
 .education {
     grid-area: e;
@@ -409,4 +418,5 @@ footer{
     }
     
 }
+
 
