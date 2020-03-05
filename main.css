@@ -58,6 +58,10 @@ body{
 
 .portrait{
     grid-area:p;
+    background-image: url("assets/SelfPortraitAgain.svg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    padding-bottom: 1500px;
 }
 
 .abouttext{
