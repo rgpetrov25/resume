@@ -203,6 +203,13 @@ header {
 
 .contacticon{
     background-image:url("assets/Email_Icon.svg");
+    backround-repeat:norepeat;
+    background-size: 100%;
+}
+.contacticon2{
+    background-image:url("assets/instagram_icon.svg");
+    backround-repeat:norepeat;
+    background-size: 100%;
 }
 
 /* .pattern{ grid-area: k;} */
