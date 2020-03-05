@@ -23,6 +23,9 @@
     padding:10%;
     /* height: 100%; */
     display: grid;
+    background-color:rgba(216, 186, 146, 0.342);
+    background-image: url("assets/roman_website_pattern-01.svg")  ;
+    background-size: 150%;
     grid-gap: 25px;
     /* this will be  the same for everyone */
     grid-template-columns: repeat(12, 1fr);
@@ -30,11 +33,11 @@
     grid-template-rows: auto;
     /* use letters from step 2 to build the grid */
     grid-template-areas: 
-        "h h h h h h h h h h c c"
+        "c c h h h h h h h h h h"
+        "t t b b b b a a a a a a"
         "q q e e e e a a a a a a"
-        "q q e e e e a a a a a a"
-        "q q b b b b a a a a a a"
-        "f f f f f f f f f f f f";
+        "k k e e e e a a a a a a"
+        "k k f f f f f f f f f f";
 }
 li{
     font-weight: 500;
@@ -47,7 +50,20 @@ li{
 }
 body{
     font-size: 4em;
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+
+}
+
+.abouttext{
+    grid-area: t;
+    padding: 50px;
+    
+}
+
+.about{
+padding:100px;
+grid-area: t;
 }
 
 ul{
@@ -59,6 +75,7 @@ h1{
     font-size: 300px;
     font-family: 'Poppins', sans-serif;
     padding: 10px;
+    color: black;
    ;
 }
 
@@ -67,7 +84,7 @@ h2{
     margin-top: 0px;
     margin-bottom: 50px;
     font-size: 150px;
-    color: gainsboro;
+    color: gray;
     font-family: 'Nunito', sans-serif;
     padding: 10px;
 }
@@ -108,25 +125,26 @@ h6{
     header{
     grid-area: h;
     padding-top: 4px;
-    background-color:lightseagreen;
-    padding: 150px;
+    
+    padding: 100px;
+    /* background-image: url("assets/roman_website_pattern_02-01.svg"); */
+    background-size: 70%;
 }
 
 .skills {
     grid-area: b;
     padding: 100px;
-    background-color: wheat;
+    /* background-color: wheat; */
 }
 
 .education {
     grid-area: e;
-    background-color: whitesmoke;
+    /* background-color: whitesmoke; */
     padding: 100px;
 }
 
 .experience {
     grid-area: a;
-    background-color: linen;
     padding: 100px;
 }
 
@@ -143,14 +161,65 @@ footer{
 
 .contact{
     grid-area: q;
+    
     padding: 100px;
+    
 }
 
 .favicon {
-    padding-top:50px;
-    padding-bottom: 50px;
-    
+    padding-top:0px;
+    padding-bottom: 0px;
     grid-area: c;
+    
+}
+header {
+    grid-area: h;
+    padding-top: 4px;
+    
+    padding: 100px;
+}
+
+.skills {
+    grid-area: b;
+    padding: 100px;
+    /* background-color: wheat; */
+}
+
+.contact{
+    grid-area: q;
+    padding: 100px;
+    /* background-image: url("assets/roman_website_pattern-01.svg")  ; */
+    
+}
+
+.pattern{ grid-area: k;}
+
+.education {
+    grid-area: e;
+    /* background-color: whitesmoke; */
+    padding: 100px;
+}
+
+.experience {
+    grid-area: a;
+    padding: 100px;
+    /* background-image: url("assets/roman_website_pattern-01.svg")  ; */
+}
+
+footer{
+    grid-area: f;
+    padding: 100px;
+}
+
+.unordered-list{ 
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+}
+
+.contact{
+    grid-area: q;
+    padding: 100px;
     
 }
     
@@ -159,68 +228,185 @@ footer{
 
 /* step three - build a grid that becomes active when the pixels are 800px or less */
 @media screen and (max-width: 800px) {
-
-    .container{
+    .container {
+        padding:10%;
         display: grid;
-        grid-gap: 15px;
-        /* grid is only one column, keep this way */
-        grid-template-columns: 1fr;
-        /* you can enter values, or auto will adjust the box sizes based on content */
+        grid-gap: 25px;
+        grid-template-columns: repeat(12, 1fr);
         grid-template-rows: auto;
-        grid-template-areas:
-        "q"
-        "h"
-        "b"
-        "a"
-        "e"
-        "f"
-        "c";
+        grid-template-areas: 
+            "h h h h h h h h h h h h"
+            "q q e e e e a a a a a a"
+            "q q e e e e a a a a a a"
+            "q q b b b b a a a a a a"
+            "f f f f f f f f f f f f";
     }
-}
-
-header {
-    grid-area: h;
-    padding-top: 4px;
-    background-color:lightseagreen;
-    padding: 150px;
-}
-
-.skills {
-    grid-area: b;
-    padding: 100px;
-    background-color: wheat;
-}
-
-.contact{
-    grid-area: q;
-    padding: 100px;
-}
-
-.education {
-    grid-area: e;
-    background-color: whitesmoke;
-    padding: 100px;
-}
-
-.experience {
-    grid-area: a;
-    background-color: linen;
-    padding: 100px;
-}
-
-footer{
-    grid-area: f;
-    padding: 100px;
-}
-
-.unordered-list{ 
-    margin-top: 0px;
-    margin-bottom: 0px;
-    padding: 0px;
-}
-
-.contact{
-    grid-area: q;
-    padding: 100px;
+    li{
+        font-weight: 500;
+        padding:10px;
+    }
+    
+    .date{
+        font-weight: 300;
+        margin-left: 50px;
+    }
+    body{
+        font-size: 4em;
+        font-family: Arial, Helvetica, sans-serif
+    }
+    
+    ul{
+        list-style: none;
+    }
+    
+    
+    h1{
+        font-size: 300px;
+        font-family: 'Poppins', sans-serif;
+        padding: 10px;
+       ;
+    }
+    
+    h2{
+        padding-top:0px;
+        margin-top: 0px;
+        margin-bottom: 50px;
+        font-size: 150px;
+        color: gainsboro;
+        font-family: 'Nunito', sans-serif;
+        padding: 10px;
+    }
+    
+    h3{
+        padding-top:45px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        font-size: 120px;
+        font-family: 'Nunito', sans-serif;
+        padding: 100px;
+    }
+    
+    h4{
+        padding-top:45px;
+        margin-top: 50px;
+        margin-bottom: 0px;
+        font-size: 82px;
+        font-family: 'Nunito', sans-serif;
+        padding: 100px;
+    }
+    
+    h5{
+        padding: 50px;
+        padding-left: 100px;
+    }
+    
+    
+    h6{
+        padding-top:25px;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        font-size: 150px;
+        color: gray;
+        font-family: 'Nunito', sans-serif;
+        padding: 100px;}
+    
+        header{
+        grid-area: h;
+        padding-top: 4px;
+        background-color:white;
+        padding: 150px;
+    }
+    
+    .skills {
+        grid-area: b;
+        padding: 100px;
+        background-color: wheat;
+    }
+    
+    .education {
+        grid-area: e;
+        background-color: whitesmoke;
+        padding: 100px;
+    }
+    
+    .experience {
+        grid-area: a;
+        background-color: linen;
+        padding: 100px;
+    }
+    
+    footer{
+        grid-area: f;
+        padding: 100px;
+    }
+    
+    .unordered-list{ 
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding: 0px;
+    }
+    
+    .contact{
+        grid-area: q;
+        padding: 100px;
+        
+    }
+    
+    .favicon {
+        padding-top:0px;
+        padding-bottom: 50px;
+        padding-right:250px;
+        
+        grid-area: c;
+        
+    }
+    header {
+        grid-area: h;
+        padding-top: 4px;
+        background-color:lightseagreen;
+        padding: 150px;
+    }
+    
+    .skills {
+        grid-area: b;
+        padding: 100px;
+        background-color: wheat;
+    }
+    
+    .contact{
+        grid-area: q;
+        padding: 100px;
+    }
+    
+    .education {
+        grid-area: e;
+        background-color: whitesmoke;
+        padding: 100px;
+    }
+    
+    .experience {
+        grid-area: a;
+        background-color: linen;
+        padding: 100px;
+    }
+    
+    footer{
+        grid-area: f;
+        padding: 100px;
+    }
+    
+    .unordered-list{ 
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding: 0px;
+    }
+    
+    .contact{
+        grid-area: q;
+        padding: 100px;
+        color:gold;
+        
+    }
     
 }
+
