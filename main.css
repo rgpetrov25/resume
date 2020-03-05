@@ -202,14 +202,15 @@ header {
 }
 
 .contacticon{
-    background-image:url("assets/Email_Icon.svg");
+    background-image:url("assets/email_icon.svg");
     backround-repeat:norepeat;
     background-size: 100%;
+    position:relative;
 }
 .contacticon2{
     background-image:url("assets/instagram_icon.svg");
     backround-repeat:norepeat;
-    background-size: 100%;
+    position:relative;
 }
 
 /* .pattern{ grid-area: k;} */
