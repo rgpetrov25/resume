@@ -1,0 +1,132 @@
+*{
+    /* outline-color:gray;
+    outline-style: dashed;
+    outline-width: 1px;
+    padding:0%; */
+    background-color: ghostwhite;
+
+}
+
+.container {
+    /* outline-color: black;
+    outline-style: dashed; */
+    
+    display: grid;
+    
+    background-repeat: no-repeat;
+    background-size: 150%;
+    grid-gap: 0px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: auto;
+    grid-template-areas: 
+
+    "s s . . . . h h h h h h"
+    ". . . . . . h h h h h h"
+    ". . . . . . e e e e e e"
+    ". . . . . . a a a a a a"
+    ". . . . . . a a a a a a"
+
+}
+
+.bodytext{
+    font-style: italic;
+}
+
+.date{
+    font-weight:normal;
+    font-style: italic;
+}
+
+.img-fluid{
+    grid-area: h;
+    
+    
+}
+
+.favicon{
+    padding-left: 0px;
+}
+
+
+
+.contacticon{
+    display: inline;
+}
+
+.header{
+    grid-area: r;
+    
+    
+}
+    
+
+.education{
+    padding:10px;
+    
+    grid-area: e;
+    
+}
+
+.skills{
+    padding:10px;
+    border-color: black;
+    border-style: solid;
+    border-width: .25px;
+    grid-area: s;
+    
+}
+
+.experience{
+    padding:10px;
+    
+    grid-area: a;
+}
+
+.contact{
+    margin:10px;
+    padding:0px;
+    grid-area: a;
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    
+    
+    font-weight: bold;
+    font-size: 100px;
+
+}
+
+h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-weight: normal;
+}
+
+h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    
+    
+}
+
+h4{
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight:bold;
+    margin:10px;
+}
+
+li{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+}
+
+ul{
+    list-style-type: none;
+    display: inline;
+}
